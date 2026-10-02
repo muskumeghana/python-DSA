@@ -1,13 +1,12 @@
- binarySearch(a,el):
-    l=0
-    r=len(a)-1
-    while l<r:
-        m=(l+r)//2
-        if a[m]==el:
-            return m
-        eldefif a[m]<el:
-            l=m
-        else:
-            r=m
-b=[12,24,56,56,23,78,89]
-print(binarySearch(b,56))
+def linearSearch(a,el):
+  ar=[]
+  for i in range(len(a)):
+    if a[i]==el:
+      ar.append(i)
+  if len(ar)>0:
+    return ar
+  return -1
+      
+
+a=[1,11,12,9,18,2,12,11,12,12]
+print(linearSearch(a,12))
